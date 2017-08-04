@@ -1,5 +1,5 @@
 group 'alexanders.mods.rbb'
-version '0.2'
+version '0.3'
 
 apply from: "https://github.com/RockBottomGame/Gradle/raw/master/buildscript.gradle"
 
@@ -18,5 +18,5 @@ dependencies {
 }
 
 jar {
-    from { configurations.compile.filter{it.name.contains("pirc")|| it.name.contains('JDA')}collect { it.isDirectory() ? it : zipTree(it) } }
+    from { configurations.compile.filter{it.name.contains("pirc")|| it.name.contains('JDA')|| it.name.contains('jna')|| it.name.contains('json')|| it.name.contains('commons')|| it.name.contains('trove4j')|| it.name.contains('websocket')|| it.name.contains('okhttp')}collect { it.isDirectory() ? it : zipTree(it) } }
 }
